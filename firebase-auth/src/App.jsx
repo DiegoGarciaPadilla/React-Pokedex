@@ -1,7 +1,9 @@
-import "./App.css";
+import { LoginCard } from "./components/LoginCard";
 
-function App() {
-    return <></>;
-}
-
-export default App;
+export const App = () => {
+    return (
+        <main className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4">
+            <LoginCard />
+        </main>
+    );
+};
