@@ -4,6 +4,8 @@
 @layer base {
   html {
     @apply font-serif;
+    @apply text-gray-100;
+    @apply bg-gray-800;
   }
 }
 @tailwind components;

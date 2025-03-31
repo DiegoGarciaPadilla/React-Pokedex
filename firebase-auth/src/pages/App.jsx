@@ -1,9 +1,10 @@
-import { LoginCard } from "../components/LoginCard";
+import { Routes, Route } from "react-router";
+import { Login } from "./Login";
 
 export const App = () => {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4">
-            <LoginCard />
-        </main>
+        <Routes>
+            <Route path="/" element={<Login />} />
+        </Routes>
     );
 };
