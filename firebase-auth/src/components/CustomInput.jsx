@@ -1,4 +1,4 @@
-export const LoginCardInput = ({ label, type, name, id, required }) => {
+export const CustomInput = ({ label, type, name, id, required }) => {
     return (
         <div>
             <label htmlFor={id} className="text-sm font-medium">{label}</label>

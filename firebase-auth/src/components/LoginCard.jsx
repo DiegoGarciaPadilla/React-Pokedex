@@ -1,4 +1,5 @@
-import { LoginCardInput } from "./LoginCardInput";
+import { Card } from "./Card";
+import { CustomInput } from "./CustomInput";
 
 export const LoginCard = () => {
     const handleSubmit = (e) => {
@@ -6,20 +7,20 @@ export const LoginCard = () => {
     };
 
     return (
-        <div className="bg-gray-700 shadow-md rounded-lg p-8 max-w-md w-full">
+        <Card>
             <h1 className="text-3xl md:text-4xl font-medium text-center mb-8 ">
                 Inicia sesión
             </h1>
             <div className="space-y-4">
                 <form action="#" onSubmit={handleSubmit} className="space-y-4">
-                    <LoginCardInput
+                    <CustomInput
                         label="Correo electrónico"
                         type="email"
                         name="email"
                         id="email"
                         required
                     />
-                    <LoginCardInput
+                    <CustomInput
                         label="Contraseña"
                         type="password"
                         name="password"
@@ -37,6 +38,6 @@ export const LoginCard = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </Card>
     );
 };
