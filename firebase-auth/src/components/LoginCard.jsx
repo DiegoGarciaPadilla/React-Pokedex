@@ -1,15 +1,22 @@
 import { Card } from "./Card";
 import { CustomInput } from "./CustomInput";
+import { useNavigate } from "react-router";
 
 export const LoginCard = () => {
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         console.log(e);
+    };
+
+    const handleClick = () => {
+        navigate("/signup");
     };
 
     return (
         <Card>
             <h1 className="text-3xl md:text-4xl font-medium text-center mb-8 ">
-                Inicia sesión
+                Iniciar sesión
             </h1>
             <div className="space-y-4">
                 <form action="#" onSubmit={handleSubmit} className="space-y-4">
@@ -27,7 +34,10 @@ export const LoginCard = () => {
                         id="password"
                         required
                     />
-                    <span className="text-center cursor-pointer hover:text-gray-300">
+                    <span
+                        className="text-center cursor-pointer hover:text-gray-300"
+                        onClick={handleClick}
+                    >
                         ¿Aún no tienes una cuenta?
                     </span>
                     <button
